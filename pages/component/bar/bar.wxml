@@ -1,0 +1,27 @@
+<!--pages/component/bar/bar.wxml-->
+<text>pages/component/bar/bar.wxml</text>
+<view class="cu-bar tabbar margin-bottom-xl bg-white">
+    <view class="action text-green">
+      <view class="cuIcon-homefill">
+        <view class="cu-tag badge">99</view>
+      </view> 首页
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-emoji"></view> 拯救不开心
+    </view>
+    <view class="action text-gray add-action">
+      <button class="cu-btn cuIcon-add bg-green shadow"></button>
+      发布
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-attentionfill">      
+      </view>
+      趣味测试
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-my">
+        <view class="cu-tag badge"></view>
+      </view>
+      我的
+    </view>
+  </view>
