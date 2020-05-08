@@ -1,0 +1,12 @@
+/* pages/AreUOK/testPaperOne.wxss */
+.steps-bottom.cu-steps .cu-item .num::before {
+  content: "\e668";
+  font-family: 'iconfont';
+}
+mymask{
+  position:fixed;
+  margin:auto;
+  background-color: var(--white);
+	border-radius: 10rpx;
+	box-shadow: 0 0 0rpx 2000rpx rgba(0, 0, 0, 0.5);
+}

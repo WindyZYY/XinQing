@@ -7,15 +7,15 @@
   </cu-custom>
     <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <view class="content" bindtap="toTestOne">
+      <navigator class="content" url="./testPaper1/testPaperOne" hover-class="none">
         <text class="cuIcon-evaluate_fill text-blue"></text>
         <text class="text-grey">你焦虑了吗？</text>
-      </view>
+      </navigator>
     </view>
     <view class="cu-item arrow">
-      <navigator class="content" url="/pages/about/log/log" hover-class="none">
+      <navigator class="content" url="" hover-class="none">
         <text class="cuIcon-formfill text-green"></text>
-        <text class="text-grey">日志</text>
+        <text class="text-grey">我自闭了</text>
       </navigator>
     </view>
     <view class="cu-item arrow">

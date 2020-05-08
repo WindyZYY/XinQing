@@ -1,0 +1,73 @@
+<!--pages/AreUOK/testPaperOne.wxml-->
+<text>pages/AreUOK/testPaperOne.wxml</text>
+<view>
+  <cu-custom bgColor="bg-cyan" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">你焦虑了吗</view>
+  </cu-custom>
+  <!-- 问题区域 -->
+  <view wx-if="{{!showRes}}" wx:for="{{quesList}}" wx:for-index="idx" wx:for-item="question" wx:key="idx">
+    <!-- 一次只显示一个问题 -->
+    <view class="cu-item bg-white padding margin" wx:if="{{step==idx}}">
+      <!-- 问题编号和内容 -->
+      <view class="content shadow-blur">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">Test</view>
+          <view class="cu-tag line-cyan">{{idx+1}}</view>
+        </view>
+        <view class="margin-top text-xl">{{question.ques}}</view>
+      </view>
+      <!-- 选择等级 -->
+      <view class="bg-white padding">
+        <view class="cu-steps">
+          <view class="cu-item {{level>question.num?'':'text-blue'}}" wx:for="{{numList}}" wx:for-index="level" wx:key>
+            <text class="num" data-idx="{{idx}}" data-index="{{level + 1}}" data-level="{{level+1}}" bindtap="chooseLevel"></text> {{item.name}}
+          </view>
+        </view>
+      </view>
+      <!-- 上一题下一题跳转 -->
+      <view class="cu-bar bg-white solid-bottom margin-top">
+        <view class="action">
+          <button class="cu-btn {{idx?'bg-green':'bg-gray'}} shadow" bindtap="prevQuestion">上一题</button>
+        </view>
+        <view class="action" wx-if="{{step!=quesList.length-1}}">
+          <button class="cu-btn bg-green shadow" bindtap="nextQuestion">下一题</button>
+        </view>
+        <view class="action" wx-if="{{step==quesList.length-1}}">
+          <button class="cu-btn bg-green shadow" bindtap="pushQuestion" data-target="pushConfirm">提交</button>
+        </view>
+      </view>
+      <!-- 提交确认 -->
+      <view class="cu-modal {{modalName=='pushConfirm'?'show':''}}">
+        <view class="cu-dialog">
+          <view class="cu-bar bg-white justify-end">
+            <view class="content">提交确认</view>
+            <view class="action" bindtap="hideModal">
+              <text class="cuIcon-close text-red"></text>
+            </view>
+          </view>
+          <view class="padding-xl">
+            已完成所有问题，是否提交答案？
+          </view>
+          <view class="cu-bar bg-white justify-end">
+            <view class="action">
+              <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+              <button class="cu-btn bg-green margin-left" bindtap="getResult">确定</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 过渡动画 -->
+  <view class="margin mymask" wx-if="{{showRes&&!myscore}}">
+    <view class="bg-white flex-sub radius shadow-lg">
+    <image src="https://image.weilanwl.com/gif/loading-white.gif" mode="aspectFit" class="gif-white response"></image>
+    </view>
+  </view>
+  <!-- 显示结果 -->
+  <view wx-if="{{showRes&&myscore}}">
+    你的得分是{{myscore}}
+    
+  </view>
+</view>

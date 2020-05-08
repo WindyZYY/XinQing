@@ -125,9 +125,9 @@ Component({
       }
       return e
     },
-    toTestOne(e) {
+    toTest(e,paperUrl) {
       wx.navigateTo({
-        url: './testPaperOne',
+        url: paperUrl,
         complete: (res) => {},
         events: e,
         fail: (res) => {},

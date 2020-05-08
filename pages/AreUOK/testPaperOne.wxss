@@ -1,5 +1,0 @@
-/* pages/AreUOK/testPaperOne.wxss */
-.steps-bottom.cu-steps .cu-item .num::before {
-  content: "\e668";
-  font-family: 'iconfont';
-}
