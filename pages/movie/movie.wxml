@@ -6,16 +6,9 @@
 
 
 <view>
-<video style="width:100%" id="myVideo" src="{{movieSrc}}"></video>
+<video style="width:100%;" id="myVideo" src="{{movieSrc}}"></video>
 
-<view class='list'>
-<view class="item" bindtap="changeList" id='item1'>{{playlist[0].title}}</view>
-
-<view class="item" bindtap="changeList" id='item2'>{{playlist[1].title}}</view>
-
-<view class="item" bindtap="changeList" id='item3'>{{playlist[2].title}}</view>
-
-<view class="item" bindtap="changeList" id='item4'>{{playlist[3].title}}</view>
-
+<view class='cu-list menu card-menu margin-top-xl  margin-bottom-xl shadow-lg'>
+  <view class="cu-item" wx:for="{{playlist}}" wx:for-index="i" wx:for-item="mov" wx:key="mov.id" data-link="{{mov.src}}" bindtap="changeList">{{mov.title}}</view>
 </view>
 </view>

@@ -36,23 +36,10 @@ Page({
     
   },
   changeList:function (e) {
-    console.log("aaaa");
-    if(e.currentTarget.id=="item1"){
-      this.data.movieSrc=this.data.playlist[0].src;
-    }
-    else if(e.currentTarget.id=="item2"){
-
-      this.data.movieSrc=this.data.playlist[1].src;
-    }
-    
-    else if(e.currentTarget.id=="item3"){
-
-      this.data.movieSrc=this.data.playlist[2].src;
-    }
-    else if(e.currentTarget.id=="item4"){
-
-      this.data.movieSrc=this.data.playlist[3].src;
-    }
+    console.log(e)
+    this.setData({
+      movieSrc: e.currentTarget.dataset.link
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

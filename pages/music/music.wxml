@@ -3,7 +3,7 @@
     <view slot="backText">返回</view>
     <view slot="content">听音乐</view>
   </cu-custom>
-<view class="tab">
+<view class="tab text-bold">
 <view class="tab-item {{tab==0?'active':''}}" bindtap="changeTabItem" data-item="0">播放器</view>
 <view class="tab-item {{tab==1?'active':''}}" bindtap="changeTabItem" data-item="1">播放列表</view>
 </view>
@@ -24,19 +24,20 @@
 <view class="player">
 <image class="player-cover" src="{{play.coverImgUrl}}"></image>
 <view class="player-info">
-<view class="player-info-title">{{play.title}}</view>
+  <view class="player-info-title">{{play.title}}</view>
 
-<view class="player-info-singer">{{play.singer}}</view>
+  <view class="player-info-singer">{{play.singer}}</view>
+
 </view>
 
 
-<view class="player-controls">
+<view class="player-controls flex justify-around text-lg">
 
-<image src="./img/播放列表.png" bindtap="changePage" data-page="2"></image>
+  <view class="cuIcon-moreandroid sl" bindtap="changePage" data-page="2"></view>
 
-<image bindtap="play" wx:if="{{state=='paused'}}"src="./img/播放.png"></image>
-<image wx:else src="./img/暂停.png" bindtap="pause"></image>
+  <view bindtap="play" wx:if="{{state=='paused'}}" class="cuIcon-playfill sl"></view>
+  <view wx:else class="cuIcon-stop" bindtap="pause"></view>
 
-<image src="./img/快进.png" bindtap="next"></image>
-</view>
+  <view class="cuIcon-play_forward_fill sl" bindtap="next"></view>
+  </view>
 </view>
