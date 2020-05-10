@@ -1,0 +1,50 @@
+/* pages/main/main.wxss */
+page{
+  background-color: #F1F1F1;
+  }
+  .box{
+    background-color: white;
+    margin:32rpx 0;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .column {
+    flex-basis: 100%;
+    display: flex;
+    flex:1;
+  }
+  .item{
+    padding: 32rpx;
+    flex:1;
+    text-align: center;
+  }
+  .item image{
+  width: 50rpx;
+  height: 50rpx;
+  }
+  .item view{
+    font-size: 26rpx;
+    margin-top: 10rpx;
+  color: #888;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  
+  }
+  .card{
+    width: 690rpx;
+    height: 730rpx;
+    border-radius: 12rpx;
+    background-color: white;
+    margin: 30rpx;
+  }
+  .call{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .call text{
+    padding:15rpx;
+    color: #888;
+  }

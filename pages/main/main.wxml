@@ -1,0 +1,46 @@
+<!--pages/main/main.wxml-->
+
+<cu-custom bgColor="bg-cyan" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">心晴</view>
+</cu-custom>
+<view class="content">
+  <view class="box">
+    <view class="column">
+      <view class="item" bindtap="toTestThree">
+        <image src="./icon/躯体.png"></image>
+        <view>躯体症状</view>
+      </view>
+      <view class="item" bindtap="toMovie">
+        <image src="./icon/视频.png"></image>
+        <view>整点视频</view>
+      </view>
+      <view class="item" bindtap="toTestTwo">
+        <image src="./icon/抑郁.png"></image>
+        <view>抑郁测试</view>
+      </view>
+    </view>
+    <view class="column">
+      <view class="item" bindtap="toMusic">
+        <image src="./icon/音乐.png"></image>
+        <view>减压音乐</view>
+      </view>
+      <view class="item" bindtap="toScience">
+        <image src="./icon/科普.png"></image>
+        <view>看点科普</view>
+      </view>
+      <view class="item" bindtap="toTestOne">
+        <image src="./icon/焦虑.png"></image>
+        <view>焦虑测试</view>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <image src="main.jpg" style="width:690rpx;height:495rpx;"></image>
+    <view class="call" bindtap="callon">
+      <text>世界还有我爱你</text>
+      <text>24小时免费心理咨询电话：</text>
+      <text>010-82951332</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,85 @@
+<scroll-view class="content-info" scroll-y>
+<br/>
+<br/>
+<view class="poem text-shadow " style="line-height:1.5">
+
+
+  <view class="text-center">
+桌上有一杯水</view>
+  <view class="text-center">
+我好渴</view>
+  <view class="text-center">
+但却伸不出手</view>
+  <view class="text-center">
+别人以为我懒</view>
+  <view class="text-center">
+我有意志，也有力气</view>
+  <view class="text-center">
+但我病了</view>
+  <view class="text-center">
+这是种意志控制不了力气的病</view>
+
+  <view class="text-center">
+
+因此我整个生命失去了活力</view>
+
+</view>
+
+<view class="mainPage text-lg padding">
+<view class="airticle">
+这是一首描述抑郁症的诗，它详细描绘了抑郁症的特点——抑郁症并不是肢体的崩坏，而是生气的丧失。
+</view>
+
+
+<view class="airticle">
+生理方面：1、严重嗜睡，且睡不醒，特别容易陷入睡眠，或者严重的失眠，早醒，或陷入梦魇
+</view>
+
+<view class="airticle">2、记忆力减退。严重的
+</view>
+
+<view class="airticle">3、语言表达能力退化
+</view>
+
+<view class="airticle">
+4、感知钝化
+</view>
+
+
+<view class="airticle">5、特别容易疲惫。工作一会儿就感到筋疲力尽，说上几分钟的话就感到自己要被掏空了。
+</view>
+
+<image  id="P2" src="./img/2.jpg"></image>
+
+<view class="airticle">心理方面：1、严重自我否定，自卑。觉得自己不值得，配不上。觉得别人都比自己好很多。
+</view>
+
+
+<view class="airticle">2、过于敏感，会把细节的信息无限放大，尤其是负面的细节和信息，而后在内心世界引起巨大的反馈。
+</view>
+
+
+<view class="airticle">3、过度自责。亲密关系中出现一些小争执，甚至算不上争执，也许只是对方一个表情和语气稍微强硬一些，就会开始道歉，即便得到对方谅解，也还会沉浸在自责的情绪中很久。
+</view>
+
+
+
+
+<view class="airticle">4、伤春悲秋，会陷在一些宏大虚无的命题中出不来。有时候都会嫌弃自己太矫情啦，但是眼泪总是在意外的时候出现。
+</view>
+
+
+<view class="airticle">
+5、自杀倾向。每天都很痛苦，总想快点结束，甚至有时候期盼一场无法抵抗的意外。
+</view>
+
+
+<view class="airticle">以上症状连续持续两周以上且影响到了正常生活，建议前往当地的精神科寻求相关医生的帮助和建议
+</view>
+
+<view class="airticle ">善于求助，是自强的表现！
+</view>
+<image class="wb" src="./img/1.jpg"></image>
+
+</view>
+</scroll-view>

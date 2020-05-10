@@ -1,0 +1,58 @@
+<scroll-view class="content-info" scroll-y>
+
+<swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{4}}" wx:key>
+    <image id="P6" src="https://image.weilanwl.com/img/4x3-{{index+1}}.jpg" mode='aspectFill'></image>
+  </swiper-item>
+</swiper>
+
+
+<view class="mainPage padding text-xl">
+<view class="airticle text-bold">
+1）制定细节的、明确的目标</view>
+<view class="airticle text-md text-gray">
+
+抑郁的人倾向于订的目标都太宏大或者模糊：“我想要快乐起来”、“我想要摆脱孤独感”；而不抑郁的人，会说：“我打算每周给我好朋友打两个电话”。前者令人更加惶恐；而后者让人更有掌控感，事实上也更能促成改变。人抑郁的时候，容易深陷迷思，所有糟糕的念头都一并而来：比如我完蛋了，我再也好不起来了，我很糟糕，我怎么才能好起来。相信我，无数的人都有这样自我怀疑，而且无比绝望的时刻。试试看，此时给自己一个更具体的目标：比如说去写一篇文章，或者买一个拖把，跟朋友约一个饭局。让哲学家去思考人类终极的问题，我们来认真做好吃喝拉撒。
+</view>
+
+
+<view class="airticle text-bold">
+
+2）起身去做些事情，或是冥想</view>
+<view class="airticle text-md text-gray">
+
+
+人在抑郁状态的时候，很容易在消极的想法里面沉迷深陷，就像踩着转轮的小老鼠，逃而不能。很多研究证实，在这样的情形下，做冥想会很有帮助。冥想当然有帮助——如果你会做冥想的话。对于我个人最有帮助的是，当大脑无法停止转动的时候，把注意力放在身体上，比如摸一下身边的物体，动动脚趾头，去走一走，或者去做件小事情。目的是，关注你身体的感觉，而借此将注意力放在当下。。
+</view>
+
+
+<view class="airticle text-bold">
+3）关于冥想</view>
+<view class="airticle text-md text-gray">
+我多年前陪一个朋友去泰国的寺庙学冥想。冥想有很多种类，走路冥想、打坐冥想，诸如此类。我始终没有学会冥想这件事情——说来羞愧，每次我都以极快的速度睡着过去。但是当时老师说的一个技巧我一直在使用。他当时说，关注你的呼吸，关注你脑袋里面浮现出来的念头。想像你面前有一个传送带（或者铁轨），当你有念头冒出来，将这个念头打包，放在传送带上，让它走掉；下一个冒出来，打包、放在传送带上，让它走掉。周而复始。我依然时不时会睡着，但这个技巧确实能够有效地把我从胡思乱想的迷思之中拖拽出来。。
+</view>
+
+<image id="P5" src="./img/5.jpg"></image>
+<view class="airticle text-bold">
+4）给自己创造一个情绪上的“安身之处”</view>
+<view class="airticle text-md text-gray">
+人在抑郁状态下，很难回忆起什么快乐的感受。一个建议是，给自己创造一个情绪上的安身之处。有的治疗技术会让来访者在冥想的状态下，回忆/或想像一个让自己感到舒适、安全、快乐的环境/情境，这个环境可能是你小时候居住的房子、山清水秀的野外，或是年幼时好朋友的家，甚至是你想像出来的，让你舒服和快乐的环境。但重要的是，你念头里面有这样一个地方。这个地方能够给你带来好的感受。当抑郁侵袭的时候，你可以偷偷跑“回去”休息一下，积攒些能量。
+</view>
+
+
+<view class="airticle text-bold">
+5）去运动</view>
+<view class="airticle text-md text-gray">
+一个长达26年的研究综述表明，运动不止能够在短期内让人的心情舒畅，从长远的角度看，它也能预防抑郁症状的发作。最近和跑北京马拉松的朋友聊天，大家一致的反馈都说，长跑是修行，也确实能够舒缓压力和让人感觉更好。抑郁发作的时候人特别不想动。那，就在抑郁发作之前，运动起来吧。
+</view>
+
+
+<view class="airticle text-bold">
+
+6）思维方式</view>
+<view class="airticle text-md text-gray">
+研究说，一个人如果倾向于对事件产生大的情绪反应，那么TA就更容易遭受抑郁症状的困扰。这亦是硬币正反面。人敏感，就容易受到情绪的困扰；而不敏感，又可能丧失创造力和想像能力。所谓人在轻躁狂状态下，特别适合艺术创作，因为那时人跳跃、丰富，有想像力。抑郁也一样。抑郁带来坏处，它亦有它的好处。最大化那些好的部分，学着和那些坏的部分握手言和——当然很难，但值得尝试。
+</view>
+</view>
+</scroll-view>
+

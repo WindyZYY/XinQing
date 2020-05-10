@@ -13,16 +13,16 @@
       </navigator>
     </view>
     <view class="cu-item arrow">
-      <navigator class="content" url="" hover-class="none">
+      <navigator class="content" url="./testPaper2/testPaperTwo" hover-class="none">
         <text class="cuIcon-formfill text-green"></text>
         <text class="text-grey">我自闭了</text>
       </navigator>
     </view>
     <view class="cu-item arrow">
-      <view class="content" bindtap="showQrcode">
+      <navigator class="content" url="./testPaper3/testPaperThree" hover-class="none">
         <text class="cuIcon-appreciatefill text-red"></text>
-        <text class="text-grey">赞赏支持</text>
-      </view>
+        <text class="text-grey">症状自评</text>
+      </navigator>
     </view>
     <view class="cu-item arrow">
       <button class="cu-btn content" open-type="feedback">

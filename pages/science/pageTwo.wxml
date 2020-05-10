@@ -1,0 +1,58 @@
+<scroll-view class="content-info" scroll-y>
+
+<view class="mainPage padding text-lg">
+
+<view class="airticle text-bold">
+有这样的一些话是不适合对抑郁症患者说的，让我们邀请一位患者说一下她的感受：
+</view>
+<view class="airticle text-bold">
+1.你有什么可抑郁的，你哪过的不好了？</view>
+<view class="airticle text-md text-gray">
+我知道我日子过得挺好的，时不时还有“应该很开心”的事发生，不用你说，我知道，我这不是努力挣扎求生呢么，不然你以为你为什么能看到我日子过得还挺好？我只是开心不起来。
+</view>
+
+<view class="airticle text-bold">
+2.（非专业人士的）分析你为什么不开心，最后结论“你要想开点”。</view>
+<view class="airticle text-md text-gray">
+道理都明白，越明白越无奈，这跟对要死的人说“你不要断气”有区别吗，有用吗？你以为我不想开心啊，我又不是抖M。
+</view>
+
+
+<view class="airticle text-bold">
+3.你整天这样消沉难过对得起关心你的人吗？</view>
+<view class="airticle text-md text-gray">
+我知道对不起，你能不强调了吗，不逼得我内疚跳楼了是不特不安心？
+</view>
+
+<image id='P3' src="./img/3.jpg"></image>
+
+<view class="airticle text-bold">
+4.你总是这样会把负能量传给别人。</view>
+<view class="airticle text-md text-gray">
+我跟你说起我的痛苦，十有八九是在求救，因为心里痛苦快要压垮自己了，可能一开始求生的欲望还能压过影响他人情绪的内疚，这句话一出，十有八九就是致命金句。
+</view>
+
+<view class="airticle">
+
+5.你太闲了，应该出去旅游/学习/健身。</view>
+<view class="airticle text-md text-gray">
+我为了不瞎想都努力让自己忙成狗了，最后还不是落到窝在门后边话也不想说觉也不想睡饭也不想吃水也不想喝站在马路中间自己都不知道迎着车就走的地步，劝我干这些没用的不如直接跟我说你这是病得治来的坦率。
+</view>
+
+<view class="airticle ">
+
+
+6.别难过了，你还有我，你难过了就想想我。</view>
+<view class="airticle text-md text-gray">
+其实这话是好心，也是真心安慰，但是就我个人来说很矛盾，听到这句话会感动，又很害怕，因为我觉得这句话的心理负担、情感负担实在太重了，礼物太重，会压死一个濒临崩溃的人，让内疚和惭愧摧垮最后一点活下去的欲望。
+</view>
+
+<view class="airticle  text-orange">
+
+
+最合适的一句话应该是：你有什么需要我帮你的吗？</view>
+
+<image src="./img/4.jpg" style="width:750rpx;height:435rpx"></image>
+
+</view>
+</scroll-view>

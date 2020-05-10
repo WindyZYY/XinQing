@@ -1,2 +1,31 @@
-<!--pages/loading/loading.wxml-->
-<text>pages/loading/loading.wxml</text>
+<!--index.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">心晴</view>
+</cu-custom>
+<view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
+  <view class="flex justify-center">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
+    <block wx:else>
+      <view class='text-center'>
+        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
+        <view class="padding">{{userInfo.nickName}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="text-center margin-top">
+  <view class="container" >
+    <view>
+      <text class="text-xl text-bold">这个世界其实很美</text>
+
+      <text class="text-lg text-bold">你要相信这不是最后一天</text>
+
+      <text class="text-lg text-bold">生命中有裂缝阳光才照得进来</text>
+
+    </view>
+    <image  bindtap="tapToIndex" src="./点击.png"></image>
+    <text class="text-sm">点击进入</text>
+  </view>
+</view>
+
+

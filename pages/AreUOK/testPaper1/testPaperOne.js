@@ -81,7 +81,9 @@ Page({
     ],
     modalName:null,
     showRes:false,
-    myscore:0
+    showAnalysis:false,
+    myscore:0,
+    toggleDelay: false
   },
   chooseLevel:function(e){
     console.log(e)
@@ -117,7 +119,7 @@ Page({
     var score=0
     var quesList=this.data.quesList
     for(var i=0;i<quesList.length;i++){
-      if(i==5||i==9||i==13||i==17||i==19){
+      if(i==4||i==8||i==12||i==16||i==18){
         score+=4-quesList[i].num;
       }else{
         score+=quesList[i].num+1;
@@ -129,10 +131,21 @@ Page({
         myscore: Math.floor(score*1.25)
       })
     },1000)
-    this.showResult()
   },
   showResult:function(){
     console.log(this.data.myscore)
+    this.setData({
+      showAnalysis: true
+    })
+    var that = this;
+    that.setData({
+      toggleDelay: true
+    })
+    setTimeout(function() {
+      that.setData({
+        toggleDelay: false
+      })
+    }, 1000)
   },
   /**
    * 生命周期函数--监听页面加载

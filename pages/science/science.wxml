@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<!--头部区域-->
+<cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">小科普</view>
+</cu-custom>
+<view class="tab shadow-lg text-bold">
+  <view class="tab-item {{tab==0?'active':''}}" bindtap="changeTabItem" data-item="0">抑郁症症状？</view>
+  <view class="tab-item {{tab==1?'active':''}}" bindtap="changeTabItem" data-item="1">哪些话不适合说</view>
+  <view class="tab-item {{tab==2?'active':''}}" bindtap="changeTabItem" data-item="2">调节抑郁情绪？</view>
+</view>
+<!--内容区域-->
+<view class="content">
+  <swiper current="{{item}}" bindchange="changeTab">
+    <swiper-item>
+      <include src="pageOne.wxml"/>
+    </swiper-item>
+    <swiper-item>
+      <include src="pageTwo.wxml"/>
+    </swiper-item>
+    <swiper-item>
+      <include src="pageThree.wxml"/>
+    </swiper-item>
+  </swiper>
+</view>

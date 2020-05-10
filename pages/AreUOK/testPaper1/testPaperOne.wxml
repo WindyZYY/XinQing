@@ -67,7 +67,55 @@
   </view>
   <!-- 显示结果 -->
   <view wx-if="{{showRes&&myscore}}">
-    你的得分是{{myscore}}
-    
+    <view class="margin padding bg-white flex justify-around animation-scaleUp" style="border:1rpx solid green; align-items:center;">
+      <view>
+        <view class="cu-avatar margin round md" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+        <text class="text-xl text-bold text-shadow">你的得分是{{myscore}}</text>
+      </view>
+      <view class="action">
+        <button class="cu-btn bg-green shadow" bindtap="showResult">查看分析</button>
+      </view>
+    </view>
+    <!-- 测试评估 -->
+    <view wx-if="{{showAnalysis}}" class="cu-timeline margin {{toggleDelay?'animation-slice-bottom':''}}" style="animation-delay: 1.5s">
+      <view class="cu-time margin-left margin-xs text-green text-bold">测试结果</view>
+      <view class="margin-left margin-xs text-grey text-xs">测试结果仅供参考，如有疑问请尽快到专业机构检查。</view>
+      <view class="cu-item cur cuIcon-emojifill text-green">
+        <view class="content bg-green light shadow-blur">
+          <view class="cu-capsule radius">
+            <view class="cu-tag bg-cyan">得分</view>
+            <view class="cu-tag line-cyan">50分以下</view>
+          </view>
+          <view class="margin-top text-xl">你的心理状态很好哦，继续保持吧。</view>
+        </view>
+      </view>       
+      <view class="cu-item cur cuIcon-emojifill text-yellow">
+        <view class="content bg-yellow light shadow-blur">
+          <view class="cu-capsule radius">
+            <view class="cu-tag bg-cyan">得分</view>
+            <view class="cu-tag line-cyan">50-59分</view>
+          </view>
+          <view class="margin-top text-xl">轻度焦虑。你已经有点焦虑了哦，请注意调节自己的心情，多和身边人倾诉，必要时请就医。</view>
+        </view>
+      </view>
+      <view class="cu-item cur cuIcon-emojifill text-orange">
+        <view class="content bg-orange light shadow-blur">
+          <view class="cu-capsule radius">
+            <view class="cu-tag bg-cyan">得分</view>
+            <view class="cu-tag line-cyan">60-69分</view>
+          </view>
+          <view class="margin-top text-xl">中度焦虑。请引起足够重视，尽快到专业医院咨询检查。</view>
+        </view>
+      </view>
+      <view class="cu-item cur cuIcon-emojifill text-red">
+        <view class="content bg-red light shadow-blur">
+          <view class="cu-capsule radius">
+            <view class="cu-tag bg-cyan">得分</view>
+            <view class="cu-tag line-cyan">70分以上</view>
+          </view>
+          <view class="margin-top text-xl">重度焦虑！！！尽快到专业医院咨询检查。</view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

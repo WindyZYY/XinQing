@@ -21,7 +21,7 @@
       <view class="bg-white padding">
         <view class="cu-steps">
           <view class="cu-item {{level>question.num?'':'text-blue'}}" wx:for="{{numList}}" wx:for-index="level" wx:key>
-            <text class="num" data-idx="{{idx}}" data-index="{{level + 1}}" data-level="{{level+1}}" bindtap="chooseLevel"></text> {{item.name}}
+            <text class="num" data-idx="{{idx}}" data-index="{{level}}" data-level="{{level}}" bindtap="chooseLevel"></text> {{item.name}}
           </view>
         </view>
       </view>
@@ -60,14 +60,62 @@
     </view>
   </view>
   <!-- 过渡动画 -->
-  <view class="margin mymask" wx-if="{{showRes&&!myscore}}">
+  <view class="margin mymask" wx-if="{{showRes&&!showScore}}">
     <view class="bg-white flex-sub radius shadow-lg">
     <image src="https://image.weilanwl.com/gif/loading-white.gif" mode="aspectFit" class="gif-white response"></image>
     </view>
   </view>
   <!-- 显示结果 -->
-  <view wx-if="{{showRes&&myscore}}">
-    你的得分是{{myscore}}
-    
+  <view wx-if="{{showRes&&showScore}}">
+    <view class="margin padding bg-white flex justify-around animation-scaleUp" style="border:1rpx solid green; align-items:center;">
+      <view>
+        <view class="cu-avatar margin round md" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+        <text class="text-xl text-bold text-shadow">你的得分是{{myscore}}</text>
+      </view>
+      <view class="action">
+        <button class="cu-btn bg-green shadow" bindtap="showResult">查看分析</button>
+      </view>
+    </view>
+    <!-- 测试评估 -->
+    <view wx-if="{{showAnalysis}}" class="cu-timeline margin {{toggleDelay?'animation-slice-bottom':''}}" style="animation-delay: 1.5s">
+      <view class="cu-time margin-left margin-xs text-green text-bold">测试结果</view>
+      <view class="margin-left margin-xs text-grey text-xs">测试结果仅供参考，如有疑问请尽快到专业机构检查。</view>
+      <view class="cu-item cur cuIcon-emojifill text-green">
+        <view class="content bg-green light shadow-blur">
+          <view class="cu-capsule radius">
+            <view class="cu-tag bg-cyan">得分</view>
+            <view class="cu-tag line-cyan">53分以下</view>
+          </view>
+          <view class="margin-top text-xl">你的心理状态很好哦，继续保持吧。</view>
+        </view>
+      </view>       
+      <view class="cu-item cur cuIcon-emojifill text-yellow">
+        <view class="content bg-yellow light shadow-blur">
+          <view class="cu-capsule radius">
+            <view class="cu-tag bg-cyan">得分</view>
+            <view class="cu-tag line-cyan">53-62分</view>
+          </view>
+          <view class="margin-top text-xl">轻度抑郁。请尽快到专业机构咨询治疗，注意协调自己的情绪。</view>
+        </view>
+      </view>
+      <view class="cu-item cur cuIcon-emojifill text-orange">
+        <view class="content bg-orange light shadow-blur">
+          <view class="cu-capsule radius">
+            <view class="cu-tag bg-cyan">得分</view>
+            <view class="cu-tag line-cyan">63-72分</view>
+          </view>
+          <view class="margin-top text-xl">中度抑郁。请引起足够重视，尽快到专业医院咨询检查。</view>
+        </view>
+      </view>
+      <view class="cu-item cur cuIcon-emojifill text-red">
+        <view class="content bg-red light shadow-blur">
+          <view class="cu-capsule radius">
+            <view class="cu-tag bg-cyan">得分</view>
+            <view class="cu-tag line-cyan">73分以上</view>
+          </view>
+          <view class="margin-top text-xl">重度抑郁！！！尽快到专业医院咨询检查。</view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
