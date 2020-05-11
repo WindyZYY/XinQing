@@ -21,7 +21,7 @@
       <view class="bg-white padding">
         <view class="cu-steps">
           <view class="cu-item {{level>question.num?'':'text-blue'}}" wx:for="{{numList}}" wx:for-index="level" wx:key>
-            <text class="num" data-idx="{{idx}}" data-index="{{level + 1}}" data-level="{{level+1}}" bindtap="chooseLevel"></text> {{item.name}}
+            <text class="num" data-idx="{{idx}}" data-index="{{level + 1}}" data-level="{{level}}" bindtap="chooseLevel"></text> {{item.name}}
           </view>
         </view>
       </view>

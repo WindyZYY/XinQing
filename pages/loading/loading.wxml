@@ -23,7 +23,7 @@
       <text class="text-lg text-bold">生命中有裂缝阳光才照得进来</text>
 
     </view>
-    <image  bindtap="tapToIndex" src="./点击.png"></image>
+    <image  bindtap="tapToIndex" src="./click.png"></image>
     <text class="text-sm">点击进入</text>
   </view>
 </view>

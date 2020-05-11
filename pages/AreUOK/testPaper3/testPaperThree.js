@@ -108,6 +108,18 @@ Page({
         ques:'感到孤独'
       },{
         num:0,
+        ques:'感到苦闷'
+      },{
+        num:0,
+        ques:'过分担忧'
+      },{
+        num:0,
+        ques:'对事物不感兴趣'
+      },{
+        num:0,
+        ques:'感到害怕'
+      },{
+        num:0,
         ques:'你的感情容易受到伤害'
       },{
         num:0,
@@ -289,7 +301,7 @@ Page({
   chooseLevel:function(e){
     console.log(e)
     this.setData({
-      ['quesList['+e.currentTarget.dataset.idx+'].num']: e.currentTarget.dataset.level-1
+      ['quesList['+e.currentTarget.dataset.idx+'].num']: e.currentTarget.dataset.level
     })
   },
   prevQuestion:function(e){
@@ -317,32 +329,32 @@ Page({
       modalName: null,
       showRes: true
     })
-    var score=new Array(10)
+    var score=this.data.myscore;
     var quesList=this.data.quesList
     var avg=this.data.avgscore
     for(var i=0;i<quesList.length;i++){
       if([0,3,11,26,39,41,47,48,51,52,55,57].includes(i)){
-        score[0]=score[0] ? score[0]+quesList[i].num+1 : quesList[i].num+1;
+        score[0]=score[0] ? score[0]+quesList[i].num : quesList[i].num;
       }else if([2,8,9,27,37,44,45,50,54,64].includes(i)){
-        score[1]=score[1] ? score[1]+quesList[i].num+1 : quesList[i].num+1;
+        score[1]=score[1] ? score[1]+quesList[i].num : quesList[i].num;
       }else if([5,20,33,35,36,41,61,68,72].includes(i)){
-        score[2]=score[2] ? score[2]+quesList[i].num+1 : quesList[i].num+1;
+        score[2]=score[2] ? score[2]+quesList[i].num : quesList[i].num;
       }else if([4,13,14,19,21,25,28,29,30,31,53,70,78].includes(i)){
-        score[3]=score[3] ? score[3]+quesList[i].num+1 : quesList[i].num+1;
+        score[3]=score[3] ? score[3]+quesList[i].num : quesList[i].num;
       }else if([1,16,22,32,38,56,71,77,79,85].includes(i)){
-        score[4]=score[4] ? score[4]+quesList[i].num+1 : quesList[i].num+1;
+        score[4]=score[4] ? score[4]+quesList[i].num : quesList[i].num;
       }else if([10,23,62,66,73,80].includes(i)){
-        score[5]=score[5] ? score[5]+quesList[i].num+1 : quesList[i].num+1;
+        score[5]=score[5] ? score[5]+quesList[i].num : quesList[i].num;
       }else if([12,24,46,49,67,74,81].includes(i)){
-        score[6]=score[6] ? score[6]+quesList[i].num+1 : quesList[i].num+1;
+        score[6]=score[6] ? score[6]+quesList[i].num : quesList[i].num;
       }else if([7,17,42,67,75,82].includes(i)){
-        score[7]=score[7] ? score[7]+quesList[i].num+1 : quesList[i].num+1;
+        score[7]=score[7] ? score[7]+quesList[i].num : quesList[i].num;
       }else if([6,15,34,61,76,83,84,86,87,89].includes(i)){
-        score[8]=score[8] ? score[8]+quesList[i].num+1 : quesList[i].num+1;
+        score[8]=score[8] ? score[8]+quesList[i].num : quesList[i].num;
       }else{
-        score[9]=score[9] ? socre[9]+quesList[i].num+1 : quesList[i].num+1;
+        score[9]=score[9] ? socre[9]+quesList[i].num : quesList[i].num;
       }
-      avg+=quesList[i].num+1;
+      avg+=quesList[i].num;
     }
     var that=this
     setTimeout(function(){
