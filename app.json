@@ -7,7 +7,10 @@
     "pages/AreUOK/testPaper1/testPaperOne",
     "pages/AreUOK/testPaper2/testPaperTwo",
     "pages/AreUOK/testPaper3/testPaperThree",
-    "pages/main/main"
+    "pages/main/main",
+    "pages/music/music",
+    "pages/science/science",
+    "pages/movie/movie"
   ],
   "window": {
     "backgroundTextStyle": "light",
