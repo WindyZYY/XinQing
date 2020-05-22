@@ -1,14 +1,18 @@
 {
   "pages": [
     "pages/loading/loading",
-    "pages/AreUOK/areUok",
     "pages/index/index",
+    "pages/AreUOK/areUok",
     "pages/component/bar/bar",
     "pages/AreUOK/testPaper1/testPaperOne",
     "pages/AreUOK/testPaper2/testPaperTwo",
     "pages/AreUOK/testPaper3/testPaperThree",
-    "pages/main/main",
-    "pages/TreeHole/treehole"
+    "pages/Main/main",
+    "pages/TreeHole/treehole",
+    "pages/Emotion/emotion",
+    "pages/Emotion/movie/movie",
+    "pages/Emotion/music/music",
+    "pages/About/about"
   ],
   "window": {
     "backgroundTextStyle": "light",

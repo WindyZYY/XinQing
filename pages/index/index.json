@@ -1,3 +1,9 @@
 {
-  "component": true
+  "usingComponents": {
+    "main": "/pages/Main/main",
+    "emotion": "/pages/Emotion/emotion",
+    "treehole": "/pages/TreeHole/treehole",
+    "areuok": "/pages/AreUOK/areUok",
+    "about": "/pages/About/about"
+  }
 }

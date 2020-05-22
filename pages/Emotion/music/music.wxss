@@ -1,0 +1,140 @@
+/* miniprogram/pages/music/music.wxss *//**index.wxss**/
+.text-center {
+	text-align: center;
+}
+.player{
+  display: flex;
+  align-items: center;
+  background:white;
+  height: 112rpx;
+}
+.player-cover{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 15rpx;
+  border-radius: 8rpx;
+}
+.content-play-progress{
+  display: flex;
+  align-items: center;
+  margin: 0 35rpx;
+  font-size: 9pt;
+  text-align: center;
+  color:black;
+}
+.content-play-progress>view{
+  flex:1;
+}
+.content-playlist{
+  width: 750rpx;
+  height: 84vh;
+}
+.player-info{
+  flex:1;
+  font-size: 10pt;
+  line-height: 38rpx;
+  margin-left: 20rpx;
+  padding-bottom: 8rpx;
+}
+.player-controls{
+  width:240rpx;
+  margin-right: 15rpx;
+}
+.padding {
+	padding: 20rpx;
+}
+
+.text-df {
+	font-size: 36rpx;
+}
+.text-lg{
+  font-size: 40rpx;
+}
+.text-gray{
+  color: #888;
+}
+.text-orange{
+  color: #f37b1d;
+}
+page{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  color: #888;
+}
+.tab{
+  display: flex;
+}
+.tab-item{
+  flex:1;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  text-align: center;
+  border-bottom: 6rpx solid white;
+  text-indent: 0.5rem;
+}
+.content{
+  flex:1;
+}
+.content >swiper{
+  height: 100%;
+}
+.tab-item.active{
+  color:  #f37b1d;
+  border-bottom-color: #f37b1d ;
+}
+.content-info{
+  height: 100%;
+}
+.content-play{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+.content-play-info>view{
+  color:black;
+  font-size: 11pt; 
+}
+.content-play-cover image{
+  animation: rotateImage 20s linear infinite;
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+}
+@keyframes rotateImage{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.playlist-item{
+  display: flex;
+  align-items: center;
+  border-radius: 1rpx solid #f37b1d;
+  height: 112rpx;
+}
+.playlist-cover{
+  width:80rpx;
+  height:80rpx;
+  margin-left: 15rpx;
+  border-radius: 8rpx;
+}
+.playlist-info{
+  flex:1;
+  font-size:10pt;
+  line-height: 38rpx;
+  margin-left: 20rpx;
+  padding-bottom: 8rpx;
+}
+.playlist-info-singer{
+  color:#888
+}
+.playlist-controls{
+  font-size:10pt;
+  margin-right:20rpx;
+  color: #f37b1d;
+}

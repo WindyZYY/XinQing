@@ -1,1 +1,10 @@
 /* pages/TreeHole/treehole.wxss */
+@import '../../colorui/main.wxss';
+.cu-item{
+  width: 710rpx;
+  margin: 20rpx;
+  border-radius: 12rpx;
+}
+.content-info{
+  height: 85vh;
+}

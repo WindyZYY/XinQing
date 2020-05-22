@@ -1,0 +1,14 @@
+/* miniprogram/pages/movie/movie.wxss */
+.item{
+  width: 690rpx;
+  height: 80rpx;
+  background-color:ghostwhite;
+  margin:30rpx;
+}
+.play{
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: greenyellow;
+
+}

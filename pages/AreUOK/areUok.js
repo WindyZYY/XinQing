@@ -1,6 +1,5 @@
 // pages/AreUOK/areUok.js
-const app = getApp()
-
+const app = getApp();
 Component({
 
   /**

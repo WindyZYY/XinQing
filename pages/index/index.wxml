@@ -1,17 +1,36 @@
-<cu-custom bgColor="bg-gradual-blue">
-  <view slot="content">ColorUI 空白模板</view>
-</cu-custom>
-<view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
-  <view class="flex justify-center">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
-    <block wx:else>
-      <view class='text-center'>
-        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
-        <view class="padding">{{userInfo.nickName}}</view>
-      </view>
-    </block>
+<main wx:if="{{PageCur=='main'}}"></main>
+<emotion wx:if="{{PageCur=='emotion'}}"></emotion>
+<treehole wx:if="{{PageCur=='treehole'}}"></treehole>
+<areuok wx:if="{{pageCur=='areuok'}}"></areuok>
+<about wx:if="{{PageCur=='about'}}"></about>
+
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="main">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/basics{{PageCur=='main'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='main'?'text-green':'text-gray'}}">首页</view>
   </view>
-</view>
-<view class="text-center margin-top">
-  <text class="text-grey text-xl">{{motto}}</text>
+  <view class="action" bindtap="NavChange" data-cur="emotion">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/component{{PageCur=='emotion'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='emotion'?'text-green':'text-gray'}}">治愈</view>
+  </view>
+  <view class="action add-action" bindtap="NavChange" data-cur="treehole">
+      <button class="cu-btn cuIcon-add bg-green shadow"></button>
+    树洞
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="areuok">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/plugin{{PageCur=='areuok'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='areuok'?'text-green':'text-gray'}}">测试</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="about">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">关于</view>
+  </view>
 </view>

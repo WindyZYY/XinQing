@@ -56,7 +56,7 @@ Page({
   },
   tapToIndex: function() {
     wx.navigateTo({
-      url: '../main/main'
+      url: '../index/index'
     })
   }, 
 })
