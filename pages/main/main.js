@@ -15,12 +15,12 @@ Component({
     },
     toMovie:function () {
       wx.navigateTo({
-        url: '../movie/movie'
+        url: '../Emotion/movie/movie'
       })
     },
     toMusic:function () {
       wx.navigateTo({
-        url: '../music/music'
+        url: '../Emotion/music/music'
       })
     },
     toScience:function(){

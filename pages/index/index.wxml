@@ -1,7 +1,7 @@
 <main wx:if="{{PageCur=='main'}}"></main>
 <emotion wx:if="{{PageCur=='emotion'}}"></emotion>
 <treehole wx:if="{{PageCur=='treehole'}}"></treehole>
-<areuok wx:if="{{pageCur=='areuok'}}"></areuok>
+<areuok wx:if="{{PageCur=='areuok'}}"></areuok>
 <about wx:if="{{PageCur=='about'}}"></about>
 
 <view class="cu-bar tabbar bg-white shadow foot">

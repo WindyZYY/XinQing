@@ -1,2 +1,53 @@
 <!--pages/Emotion/emotion.wxml-->
 <text>pages/Emotion/emotion.wxml</text>
+<cu-custom bgColor="bg-cyan" isBack="{{true}}">
+	<view slot="content">治愈你的心情</view>
+</cu-custom>
+<scroll-view class="myscroll">
+<movable-area class="movable-area">
+	<!-- 视频类 -->
+	<view class="cu-card case {{isCard?'no-card':''}}">
+		<view class="cu-item shadow" bindtap="Movie">
+			<view class="image">
+				<image src="../../images/emotion/movie.jpg" mode="widthFix"></image>
+				<view class="cu-tag bg-blue">视频</view>
+				<view class="cu-bar bg-shadeBottom">
+					<text class="text-cut">你或许还没发现，生活其实很美好</text>
+				</view>
+			</view>
+		</view>
+		<!-- 文章类 -->
+		<view class="cu-card article {{isCard?'no-card':''}}">
+			<view class="cu-item shadow">
+				<view class="title">
+					<view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
+				</view>
+				<view class="content">
+					<image src="../../images/emotion/article.jpg" mode="aspectFill"></image>
+					<view class="desc">
+						<view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+						<view>
+							<view class="cu-tag bg-red light sm round">正义天使</view>
+							<view class="cu-tag bg-green light sm round">史诗</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 图片类 -->
+	<view class="cu-card dynamic {{isCard?'no-card':''}}">
+		<view class="cu-item shadow padding-tb">
+			<view class="text-content">
+				偶遇一只小萌宠，这也太可爱了吧
+			</view>
+			<view class="grid flex-sub padding-lr {{isCard?'col-3 grid-square':'col-1'}}">
+				<view class="bg-img {{isCard?'':'only-img'}}" style="background-image:url(../../../../images/emotion/picture.jpg);">
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 音乐类 -->
+	<movable-view class="cuIcon-musicfill  movable-view" direction="all" bindtap="Music"></movable-view>
+	</movable-area>
+</scroll-view>

@@ -12,7 +12,8 @@
     "pages/Emotion/emotion",
     "pages/Emotion/movie/movie",
     "pages/Emotion/music/music",
-    "pages/About/about"
+    "pages/About/about",
+    "pages/AreUOK/moreTest/moreTest"
   ],
   "window": {
     "backgroundTextStyle": "light",

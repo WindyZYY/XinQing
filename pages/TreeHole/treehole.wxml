@@ -1,37 +1,39 @@
 <!--pages/TreeHole/treehole.wxml-->
-<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">树洞</view></cu-custom>
- 
- <scroll-view  class="content-info" scroll-y>
- <view class="cu-list menu-avatar comment solids-top" >
-      <view class="cu-item" wx:for="{{datalist}}" wx:for-index="i" wx:for-item="ite" wx:key="ite.id">
-        <view class="cu-avatar round" style="background-image:url({{ite.url}});"></view>
-        <view class="content">
-          <view class="text-grey">{{ite.name}}</view>
-          <view class="text-gray text-content text-df">
-           {{ite.content}}
-          </view>
-          <view class="bg-grey padding-sm radius margin-top-sm  text-sm" 
-          wx:for="{{ite.comments}}" wx:for-item="itemC">
-            <view class="flex">
-              <view>{{itemC.name}}：</view>
-              <view class="flex-sub">{{itemC.comment}}</view>
-            </view>
-          </view>
-          <view class="margin-top-sm flex justify-between">
-            <view class="text-gray text-df">{{ite.time}}</view>
-            <view>
-              <text class="cuIcon-appreciatefill text-gray {{dz}}" bindtap="dz"></text>
-              <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
-            </view>
-          </view>
-        </view>
-      </view>
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">畅所欲言</view>
+</cu-custom>
 
-    </view>
-    
-    </scroll-view>
-    
+<scroll-view class="content-info myscroll" scroll-y>
+	<view class="cu-list menu-avatar comment solids-top">
+		<view class="cu-item" wx:for="{{datalist}}" wx:for-index="i" wx:for-item="ite" wx:key="ite.id">
+			<view class="cu-avatar round" style="background-image:url({{ite.url}});"></view>
+			<view class="content">
+				<view class="text-grey">{{ite.name}}</view>
+				<view class="text-gray text-content text-df">
+					{{ite.content}}
+				</view>
+				<view class="bg-grey padding-sm radius margin-top-sm  text-sm" wx:for="{{ite.comments}}" wx:for-item="itemC">
+					<view class="flex">
+						<view>{{itemC.name}}：</view>
+						<view class="flex-sub">{{itemC.comment}}</view>
+					</view>
+				</view>
+				<view class="margin-top-sm flex justify-between">
+					<view class="text-gray text-df">{{ite.time}}</view>
+					<view>
+						<text class="cuIcon-appreciatefill text-gray {{dz}}" bindtap="dz"></text>
+						<text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+					</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+</scroll-view>
+
 <view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
-  <input bindinput="bindKeyInput" class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
-  <view class="cu-btn bg-green shadow" bindtap="addMoment">发送</view>
+	<input bindinput="bindKeyInput" class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+	<view class="cu-btn bg-green shadow" bindtap="addMoment">发送</view>
 </view>

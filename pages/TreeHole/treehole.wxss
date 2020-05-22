@@ -8,3 +8,6 @@
 .content-info{
   height: 85vh;
 }
+.myscroll{
+  margin-bottom: 52px;
+}
