@@ -6,28 +6,22 @@
 
     <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <navigator class="content" url="./testPaper1/testPaperOne" hover-class="none">
+      <navigator class="content" url="../AreUOK/testPaper1/testPaperOne" hover-class="none">
         <text class="cuIcon-evaluate_fill text-blue"></text>
         <text class="text-grey">你焦虑了吗？</text>
       </navigator>
     </view>
     <view class="cu-item arrow">
-      <navigator class="content" url="./testPaper2/testPaperTwo" hover-class="none">
+      <navigator class="content" url="../AreUOK/testPaper2/testPaperTwo" hover-class="none">
         <text class="cuIcon-formfill text-green"></text>
         <text class="text-grey">我自闭了</text>
       </navigator>
     </view>
     <view class="cu-item arrow">
-      <navigator class="content" url="./testPaper3/testPaperThree" hover-class="none">
+      <navigator class="content" url="../AreUOK/testPaper3/testPaperThree" hover-class="none">
         <text class="cuIcon-appreciatefill text-red"></text>
         <text class="text-grey">症状自评</text>
       </navigator>
-    </view>
-    <view class="cu-item arrow">
-      <button class="cu-btn content" open-type="feedback">
-        <text class="cuIcon-writefill text-cyan"></text>
-        <text class="text-grey">意见反馈</text>
-      </button>
     </view>
     <view class="cu-item arrow">
       <navigator class="content" url="/pages/AreUOK/moreTest/moreTest" hover-class="none">

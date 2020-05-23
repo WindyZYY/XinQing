@@ -62,8 +62,28 @@ Component({
       ]
       }
   ],
+  userInfo:{
+    avatarUrl:"../../images/share.png",//用户头像
+    nickName:"请先登录",//用户昵称
   },
-
+  inputReady: false,
+  moment:true,
+  reply:false
+  },
+  attached() {
+    let that=this
+    wx.getUserInfo({
+      complete: (res) => {
+        console.log(res);
+        var avatarUrl = 'userInfo.avatarUrl';
+        var nickName = 'userInfo.nickName';
+        that.setData({
+          [avatarUrl]: res.userInfo.avatarUrl,
+          [nickName]:res.userInfo.nickName,
+        })
+      },
+    })
+  },
   /**
    * 组件的方法列表
    */
@@ -75,31 +95,56 @@ Component({
     },
     pl:function(e){
       console.log(e);
+      this.setData({
+        inputReady: true,
+        reply: true,
+        moment:false
+      })
+    },
+    addReply:function(e){
+            let that=this;
       let dList=this.data.datalist;
       let item={
-        name:'小魏小魏 啥也不会',
-        comment:"层主好棒！加油！",
+        name:this.data.userInfo.nickName,
+        comment:this.data.inputComment,
       };
       dList[2].comments.push(item);
-      this.setData({
+      that.setData({
         datalist:dList
-      })
+      });
+      setTimeout(function(){
+        that.setData({
+          inputComment: ""
+        })
+      },1000)
     },
     addMoment:function(e){
       console.log('111');
+      let that=this;
+      that.setData({
+        inputReady: true,
+        reply: false,
+        moment: true
+      })
       let dList=this.data.datalist;
       let item={
         id:dList.length,
-        url:"https://ossweb-img.qq.com/images/lol/web201310/skin/big10005.jpg",
-        name:'小魏小魏 啥也不会',
-        time:'2020年5月22日',
+        url:this.data.userInfo.avatarUrl,
+        name:this.data.userInfo.nickName,
+        time:'2020年5月23日',
         content:this.data.inputComment,
       };
       console.log('222');
       dList.push(item);
-      this.setData({
+      that.setData({
         datalist:dList
-      })
+      });
+
+      setTimeout(function(){
+        that.setData({
+          inputComment: ""
+        })
+      },1000)
     },
     update:function(){
       wx.cloud.init({

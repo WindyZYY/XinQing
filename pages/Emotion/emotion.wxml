@@ -41,7 +41,8 @@
 				偶遇一只小萌宠，这也太可爱了吧
 			</view>
 			<view class="grid flex-sub padding-lr {{isCard?'col-3 grid-square':'col-1'}}">
-				<view class="bg-img {{isCard?'':'only-img'}}" style="background-image:url(../../../../images/emotion/picture.jpg);">
+				<view class="image">
+				<image src="../../images/emotion/picture.jpg" mode="widthFix"></image>
 				</view>
 			</view>
 		</view>

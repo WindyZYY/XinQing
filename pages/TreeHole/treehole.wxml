@@ -6,7 +6,7 @@
 
 <scroll-view class="content-info myscroll" scroll-y>
 	<view class="cu-list menu-avatar comment solids-top">
-		<view class="cu-item" wx:for="{{datalist}}" wx:for-index="i" wx:for-item="ite" wx:key="ite.id">
+		<view class="cu-item" wx:for="{{datalist}}" wx:for-index="i" wx:for-item="ite" wx:for-index="treeholeidx" wx:key="ite.id">
 			<view class="cu-avatar round" style="background-image:url({{ite.url}});"></view>
 			<view class="content">
 				<view class="text-grey">{{ite.name}}</view>
@@ -23,7 +23,7 @@
 					<view class="text-gray text-df">{{ite.time}}</view>
 					<view>
 						<text class="cuIcon-appreciatefill text-gray {{dz}}" bindtap="dz"></text>
-						<text class="cuIcon-messagefill text-gray margin-left-sm" bindtap="pl"></text>
+						<text class="cuIcon-messagefill text-gray margin-left-sm" data-idx="{{treeholeIdx}}" bindtap="pl"></text>
 					</view>
 				</view>
 			</view>
@@ -35,6 +35,7 @@
 
 
 <view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
-	<input bindinput="bindKeyInput" class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
-	<view class="cu-btn bg-green shadow" bindtap="addMoment">发送</view>
+	<input bindinput="bindKeyInput" focus="{{inputReady}}" class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" maxlength="300" cursor-spacing="10" placeholder="畅所欲言"></input>
+	<view class="cu-btn bg-green shadow" wx:if="{{moment}}" bindtap="addMoment">发送</view>
+	<view class="cu-btn bg-green shadow" wx:if="{{reply}}" bindtap="addReply">评论</view>
 </view>
