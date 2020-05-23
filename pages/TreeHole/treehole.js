@@ -6,7 +6,9 @@ Component({
   properties: {
 
   },
-
+  options: {
+    addGlobalClass: true,
+  },
   /**
    * 组件的初始数据
    */
@@ -72,6 +74,7 @@ Component({
       })
     },
     pl:function(e){
+      console.log(e);
       let dList=this.data.datalist;
       let item={
         name:'小魏小魏 啥也不会',

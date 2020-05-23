@@ -47,7 +47,7 @@
 		</view>
 	</view>
 	<!-- 音乐类 -->
-	<view class="mymusic shadow" bindtap="Music">
-		<text class="cuIcon-musicfill lg bold text-white"></text>
+	<view class="action mymusic shadow" bindtap="Music">
+		<image class="showMusic" src="../Emotion/music/img/Music.png"></image>
 	</view>
 </scroll-view>
