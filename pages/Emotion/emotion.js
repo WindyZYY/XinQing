@@ -19,12 +19,12 @@ Component({
   methods:{
     Movie:function(e){
       wx.navigateTo({
-        url: './movie/movie',
+        url: '../Emotion/movie/movie',
       })
     },
     Music:function(e){
       wx.navigateTo({
-        url: './music/music',
+        url: '../Emotion/music/music',
       })
     },
     viewTouchMove: function (e) {

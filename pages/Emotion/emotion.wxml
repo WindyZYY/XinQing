@@ -4,7 +4,6 @@
 	<view slot="content">治愈你的心情</view>
 </cu-custom>
 <scroll-view class="myscroll">
-<movable-area class="movable-area">
 	<!-- 视频类 -->
 	<view class="cu-card case {{isCard?'no-card':''}}">
 		<view class="cu-item shadow" bindtap="Movie">
@@ -48,6 +47,7 @@
 		</view>
 	</view>
 	<!-- 音乐类 -->
-	<movable-view class="cuIcon-musicfill  movable-view" direction="all" bindtap="Music"></movable-view>
-	</movable-area>
+	<view class="mymusic shadow" bindtap="Music">
+		<text class="cuIcon-musicfill lg bold text-white"></text>
+	</view>
 </scroll-view>
